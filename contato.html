@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Entre em contato com a Prolintec e encontre a solução ideal para sua empresa." />
+  <title>Contato | Prolintec</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="topbar">FRETE GRÁTIS NAS COMPRAS ACIMA DE R$ 149 &nbsp;•&nbsp; ENTREGA RÁPIDA EM TODO O BRASIL</div>
+  <header>
+    <nav class="container nav">
+      <a class="brand" href="index.html" aria-label="Prolintec início"><span class="brand-mark">✦</span> PROLINTEC</a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#categorias">Categorias</a>
+        <a href="index.html#mais-vendidos">Mais vendidos</a>
+        <a href="index.html#sobre">Sobre nós</a>
+        <a href="contato.html" aria-current="page">Contato</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contact-page">
+    <div class="container contact-layout">
+      <section class="contact-intro">
+        <div class="eyebrow">fale com a Prolintec</div>
+        <h1>Vamos encontrar a solução certa para você.</h1>
+        <p>Preencha seus dados e conte como podemos ajudar. Nossa equipe entrará em contato para entender sua necessidade e indicar os produtos ideais.</p>
+      </section>
+      <form class="contact-form" onsubmit="sendContact(event)">
+        <div class="form-field">
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" placeholder="Seu nome completo" autocomplete="name" required />
+        </div>
+        <div class="form-field">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="seu@email.com" autocomplete="email" required />
+        </div>
+        <div class="form-field">
+          <label for="telefone">Telefone</label>
+          <input id="telefone" name="telefone" type="tel" placeholder="(00) 00000-0000" autocomplete="tel" required />
+        </div>
+        <div class="form-field">
+          <label for="mensagem">Mensagem <span>(opcional)</span></label>
+          <textarea id="mensagem" name="mensagem" placeholder="Conte um pouco sobre o que você precisa"></textarea>
+        </div>
+        <button class="primary" type="submit">Enviar mensagem</button>
+      </form>
+    </div>
+  </main>
+
+  <footer><div class="container footer-inner"><div class="footer-brand">✦ PROLINTEC</div><div>© 2026 Prolintec. 19 anos no mercado, 30 anos de experiência.</div><div>Instagram &nbsp;•&nbsp; Atendimento</div></div></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script>
+    let toastTimer;
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
+    }
+    function sendContact(event) {
+      event.preventDefault();
+      showToast('Mensagem enviada! Em breve entraremos em contato.');
+      event.target.reset();
+    }
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

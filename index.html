@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Prolintec: soluções profissionais e domésticas em limpeza, higiene, papéis, descartáveis e equipamentos." />
+  <title>Prolintec | Soluções em limpeza e higiene</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="topbar">FRETE GRÁTIS NAS COMPRAS ACIMA DE R$ 149 &nbsp;•&nbsp; ENTREGA RÁPIDA EM TODO O BRASIL</div>
+  <header>
+    <nav class="container nav">
+      <a class="brand" href="#inicio" aria-label="Prolintec início"><span class="brand-mark">✦</span> PROLINTEC</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#categorias">Categorias</a>
+        <a href="#mais-vendidos">Mais vendidos</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" aria-label="Buscar" onclick="document.getElementById('search').focus()">⌕</button>
+        <button class="icon-btn cart-button" aria-label="Abrir carrinho" onclick="showToast('Seu carrinho está pronto para receber seus favoritos.')">♧<span class="cart-count" id="cartCount">0</span></button>
+        <button class="icon-btn menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">soluções em limpeza e higiene</div>
+          <h1>Limpeza profissional, <span>experiência que entrega.</span></h1>
+          <p class="hero-copy">A Prolintec atende lavanderias, cozinhas industriais, hotéis, empresas, frigoríficos, granjas e hospitais com produtos, papéis, descartáveis e equipamentos para todos os desafios.</p>
+          <div class="hero-buttons"><a class="primary" href="#mais-vendidos">Ver nossas soluções ↗</a><a class="text-link" href="contato.html">Fale conosco</a></div>
+          <div class="hero-note"><div class="avatars"><div class="avatar">19</div><div class="avatar">30</div><div class="avatar">+1</div></div><span>19 anos no mercado e 30 anos de experiência</span></div>
+        </div>
+        <div class="hero-art"><img class="hero-image" src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=900&q=85" alt="Produtos de limpeza organizados em uma bancada" /><div class="floating-tag">favorito da casa<strong>+23% de brilho</strong></div></div>
+      </div>
+    </section>
+
+    <section class="benefits"><div class="container benefits-grid"><div class="benefit"><div class="benefit-icon">19</div><div><strong>19 anos de mercado</strong><span>Uma parceria construída com confiança</span></div></div><div class="benefit"><div class="benefit-icon">30</div><div><strong>30 anos de experiência</strong><span>Conhecimento para indicar o produto certo</span></div></div><div class="benefit"><div class="benefit-icon">✓</div><div><strong>Soluções completas</strong><span>Da limpeza diária ao equipamento profissional</span></div></div></div></section>
+
+    <section class="section" id="categorias"><div class="container"><div class="section-heading"><div><div class="eyebrow">soluções por segmento</div><h2>Encontre o que sua operação precisa</h2></div><p>Atendimento para empresas, indústrias, instituições e também para sua casa.</p></div><div class="category-grid"><a class="category" href="#mais-vendidos"><h3>Lavanderia industrial</h3><p>Processos eficientes e seguros</p><div class="category-art">◌</div></a><a class="category" href="#mais-vendidos"><h3>Cozinha industrial</h3><p>Higiene para alto desempenho</p><div class="category-art">⌁</div></a><a class="category" href="#mais-vendidos"><h3>Papéis e descartáveis</h3><p>Higiene para todos os ambientes</p><div class="category-art">✦</div></a><a class="category" href="#mais-vendidos"><h3>Equipamentos</h3><p>Limpeza profissional completa</p><div class="category-art">✿</div></a></div></div></section>
+
+    <section class="section products-section" id="mais-vendidos"><div class="container"><div class="section-heading"><div><div class="eyebrow">nosso portfólio</div><h2>Produtos e equipamentos</h2></div><p>Uma seleção para manter sua operação, empresa ou casa sempre em ordem.</p></div><div class="product-grid">
+      <article class="product-card"><div class="product-photo"><span class="badge">industrial</span><img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=600&q=80" alt="Produtos para cozinha industrial" /></div><div class="product-info"><div class="product-type">Cozinha industrial</div><h3>Desengordurante profissional</h3><div class="rating">★★★★★ <span>alto rendimento</span></div><div class="product-bottom"><div class="price">Consulte</div><button class="add-button" aria-label="Solicitar desengordurante profissional" onclick="showToast('Vamos ajudar você a escolher a solução ideal.')">+</button></div></div></article>
+      <article class="product-card"><div class="product-photo"><span class="badge">higiene</span><img src="https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?auto=format&fit=crop&w=600&q=80" alt="Papel toalha para empresas" /></div><div class="product-info"><div class="product-type">Papéis</div><h3>Papel toalha e papel higiênico</h3><div class="rating">★★★★★ <span>diversos formatos</span></div><div class="product-bottom"><div class="price">Consulte</div><button class="add-button" aria-label="Solicitar papéis para higiene" onclick="showToast('Vamos ajudar você a escolher a solução ideal.')">+</button></div></div></article>
+      <article class="product-card"><div class="product-photo"><img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=600&q=80" alt="Produtos de limpeza para lavanderia industrial" /></div><div class="product-info"><div class="product-type">Lavanderia industrial</div><h3>Produtos para lavagem profissional</h3><div class="rating">★★★★☆ <span>performance e cuidado</span></div><div class="product-bottom"><div class="price">Consulte</div><button class="add-button" aria-label="Solicitar produtos para lavanderia" onclick="showToast('Vamos ajudar você a escolher a solução ideal.')">+</button></div></div></article>
+      <article class="product-card"><div class="product-photo"><span class="badge">completo</span><img src="https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?auto=format&fit=crop&w=600&q=80" alt="Equipamentos e acessórios de limpeza" /></div><div class="product-info"><div class="product-type">Equipamentos</div><h3>Máquinas e acessórios de limpeza</h3><div class="rating">★★★★★ <span>para todo desafio</span></div><div class="product-bottom"><div class="price">Consulte</div><button class="add-button" aria-label="Solicitar equipamentos de limpeza" onclick="showToast('Vamos ajudar você a escolher a solução ideal.')">+</button></div></div></article>
+    </div></div></section>
+
+    <section class="newsletter" id="sobre"><div class="container"><div class="newsletter-box"><div><div class="eyebrow">fale com a Prolintec</div><h2>Experiência para cuidar do seu negócio.</h2><p>Conte para nós o que sua empresa precisa. Nossa equipe ajuda a encontrar os produtos e equipamentos certos.</p></div><form class="email-form" onsubmit="subscribe(event)"><input id="search" type="email" placeholder="Seu melhor e-mail" aria-label="Seu melhor e-mail" required /><button type="submit">Solicitar contato</button></form></div></div></section>
+  </main>
+  <footer><div class="container footer-inner"><div class="footer-brand">✦ PROLINTEC</div><div>© 2026 Prolintec. 19 anos no mercado, 30 anos de experiência.</div><div>Instagram &nbsp;•&nbsp; Atendimento</div></div></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script>
+    let cartItems = 0;
+    let toastTimer;
+    function addToCart(product) { cartItems += 1; document.getElementById('cartCount').textContent = cartItems; showToast(product + ' foi adicionado ao carrinho.'); }
+    function showToast(message) { const toast = document.getElementById('toast'); toast.textContent = message; toast.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.classList.remove('show'), 2800); }
+    function subscribe(event) { event.preventDefault(); showToast('Pronto! Seu desconto está a caminho.'); event.target.reset(); }
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+  </script>
+</body>
+</html>
